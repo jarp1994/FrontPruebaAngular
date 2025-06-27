@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Empleado } from '../../models/empleado.model';
+import { Empleado } from '../models/empleado.model';
 import { ActivatedRoute } from '@angular/router';
-import { EmployeeDataService } from '../../service/employee-data.service';
-import { MensajeComponent } from '../../mensaje/mensaje.component';
 import { MatDialog } from '@angular/material/dialog';
+import { EmployeeDataService } from '../service/employee-data.service';
+import { MensajeComponent } from '../mensaje/mensaje.component';
 
 @Component({
   selector: 'app-employee-info',
@@ -16,6 +16,7 @@ export class EmployeeInfoComponent implements OnInit {
 
   empleado: Empleado
   id:number
+  anualSalary: number
   cargando: boolean
   constructor(
      private route: ActivatedRoute,
@@ -33,9 +34,11 @@ export class EmployeeInfoComponent implements OnInit {
       console.log(this.id)
 
       this.service.getEmployeeById(this.id).subscribe({next: (response) =>{
-      console.log(response)
+        console.log(response)
         this.empleado = response.employee
-        console.log(this.empleado )
+        console.log(this.empleado)
+        this.anualSalary = response.anualSalary
+        console.log(this.anualSalary)
         this.cargando = false;
     },
     error: (err) => {

@@ -19,7 +19,6 @@ import { MensajeComponent } from '../mensaje/mensaje.component';
 export class EmployeesComponent implements OnInit {
 
   employees: Empleado[]
-  anualSalary: number[]
   cargando:boolean
   constructor(
     private service: EmployeeDataService,
@@ -33,12 +32,11 @@ export class EmployeesComponent implements OnInit {
 
     this.service.getAllEmployees().subscribe({next: (response) =>{
       this.employees = response.employees
-      this.anualSalary = response.anualSalary
       this.cargando = false;
     },
     error: (err) => {
       this.cargando = false;
-      this.openMensaje("Too Many Requests to the API, pleasw wait a few minutes")
+      this.openMensaje("Too Many Requests to the API, please wait a few minutes")
     }
   })
 

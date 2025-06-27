@@ -13,7 +13,7 @@
       <td class="tbody">{{empleado?.employee_salary}}</td>
       <td class="tbody">{{empleado?.employee_age}}</td>
       <td class="tbody">{{empleado?.profile_image || "No available Image"}}</td>
-      <td class="tbody">0</td>
+      <td class="tbody">{{anualSalary | currency: 'COP ' }}</td>
     </tr>
   </table>
 </div>
