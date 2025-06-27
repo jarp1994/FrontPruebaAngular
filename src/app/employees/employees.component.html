@@ -1,0 +1,25 @@
+
+<div class="spinner-overlay" *ngIf="cargando">
+  <div class="spinner"></div>
+</div>
+<div class="contenedorTabla">
+  <h2 class="titulo">Empleados</h2>
+  <hr class="linea">
+  <table class="table">
+    <td class="theader">Id</td>
+    <td class="theader">Nombre</td>
+    <td class="theader">Salario</td>
+    <td class="theader">Edad</td>
+    <td class="theader">Imagen</td>
+    <td class="theader">Salario Anual</td>
+
+    <tr *ngFor="let employee of employees; let i = index">
+      <td class="tbody">{{employee?.id}}</td>
+      <td class="tbody">{{employee?.employee_name}}</td>
+      <td class="tbody">{{employee?.employee_salary | currency: 'COP '}}</td>
+      <td class="tbody">{{employee?.employee_age}}</td>
+      <td class="tbody">{{employee?.profile_image || "No available Image"}}</td>
+      <td class="tbody">{{anualSalary[i] | currency: 'COP ' }}</td>
+    </tr>
+  </table>
+</div>

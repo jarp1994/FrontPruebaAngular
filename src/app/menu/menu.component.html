@@ -1,0 +1,17 @@
+<div class="spinner-overlay" *ngIf="cargando">
+  <div class="spinner"></div>
+</div>
+<section class="menuContenedor">
+  <div class="barraNav">
+    <div class="zona1">
+      <img class="logo" src="../../assets/image001.png">
+    </div>
+    <div class="contenedorBuscador">
+      <input class="buscador" type="text" placeholder="Search by the employee id.." [(ngModel)]="id">
+      <button class="button" (click)="findEmployeeById()">Search</button>
+
+    </div>
+
+  </div>
+
+</section>

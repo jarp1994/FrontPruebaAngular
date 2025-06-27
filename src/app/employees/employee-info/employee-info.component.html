@@ -1,0 +1,19 @@
+<div class="contenedorTabla">
+  <table class="table">
+    <td class="theader">Id</td>
+    <td class="theader">Nombre</td>
+    <td class="theader">Salario</td>
+    <td class="theader">Edad</td>
+    <td class="theader">Imagen</td>
+    <td class="theader">Salario Anual</td>
+
+    <tr>
+      <td class="tbody">{{empleado?.id}}</td>
+      <td class="tbody">{{empleado?.employee_name}}</td>
+      <td class="tbody">{{empleado?.employee_salary}}</td>
+      <td class="tbody">{{empleado?.employee_age}}</td>
+      <td class="tbody">{{empleado?.profile_image || "No available Image"}}</td>
+      <td class="tbody">0</td>
+    </tr>
+  </table>
+</div>

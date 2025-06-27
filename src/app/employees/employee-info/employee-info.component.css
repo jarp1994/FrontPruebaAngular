@@ -1,0 +1,19 @@
+.contenedorTabla{
+  margin: 50px;
+}
+
+.table{
+  margin: auto;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.theader{
+  background-color: rgb(71, 11, 11);
+  border: 1px solid black;
+  color: grey;
+}
+
+.tbody{
+  border: 1px solid black;
+}
