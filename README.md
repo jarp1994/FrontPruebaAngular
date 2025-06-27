@@ -1,11 +1,28 @@
-# PruebaTecnicaFront
+ Frontend
+Angular application to consume backend API.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Employee list and search by ID.
 
-## Development server
+Styled with Bootstrap 5.
 
-To start a local development server, run:
 
-npm i and then ng serve
+💻 Frontend (Angular)
+Clone the frontend repo:
 
-The project consists in a table that will show the employees of acompany with their information. You can use the search button to find an employee by his id. If you dont enter any id, it will show you the list of all the employees.
+
+git clone https://github.com/your-user/FrontPruebaAngular.git
+cd FrontPruebaAngular
+Install dependencies:
+
+
+npm install
+Run the app:
+
+ng serve
+App runs at:
+http://localhost:4200
+
+⚠️ Notes
+The external API used (https://dummy.restapiexample.com) has rate limits. Caching is implemented to prevent 429 errors.
+
+This project does not persist data in a database. All data comes from the external API.
